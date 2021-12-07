@@ -61,7 +61,7 @@ fn <- "Biomonitoring_Samples_CB.csv"
 
 DEP uses “NA” to indicate “Non Attainment” in the data. By default, R
 interprets that as `NA`, meaning missing data. We need to address that
-in our code for reading the data. WE also need to be careful in later
+in our code for reading the data. We also need to be careful in later
 analyses that R does not drop that value. We considered changing the
 data label, but DEP uses “NA” consistently, and for simplicity of
 communications it is easiest if we retain the original designation.
@@ -127,7 +127,7 @@ select(-contains('FID')) %>%
 Note that this data contains invertebrate, wetland, and algae sample
 data, including sometimes sharing the same site designations.
 
-We are only interested in “most recent” invertebrate biomonitoting data.
+We are only interested in “most recent” invertebrate biomonitoring data.
 Further, we are interested only in data that relates to the recent past.
 Here we restrict ourselves to sites from the most recent ten years of
 available data. Currently, that corresponds to 2009 through 2018.
